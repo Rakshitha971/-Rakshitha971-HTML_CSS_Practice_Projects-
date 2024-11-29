@@ -1,0 +1,101 @@
+<<<<<<< HEAD
+body {
+  background-color: hsl(47, 88%, 63%);
+  font-family: "Figtree", sans-serif;
+}
+
+.card {
+  max-width: 340px;
+  border: 2px solid hsl(0, 0%, 7%);
+  margin: 50px auto;
+  box-shadow: 10px 8px 0px hsl(0, 0%, 7%);
+  border-radius: 20px;
+  padding: 20px;
+  background-color: white;
+}
+
+button {
+  background-color: hsl(47, 88%, 63%);
+  color: hsl(0, 0%, 7%);
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 900;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.profile {
+  display: flex;
+}
+
+.content {
+  color: hsl(0, 0%, 50%);
+  line-height: 25px;
+  font-size: 16px;
+}
+
+h4 {
+  margin-left: 10px;
+  font-weight: 900;
+}
+
+.card-image {
+  max-width: 100%;
+}
+=======
+body{
+    background-color: hsl(47, 88%, 63%);
+    font-family: "Figtree", sans-serif;
+
+    
+}
+
+.card{
+    height: 530px;
+    width: 340px;
+    border: 2px solid hsl(0, 0%, 7%);
+    margin: 50px auto;
+    box-shadow: 10px 8px 0px hsl(0, 0%, 7%);
+    border-radius: 20px;
+    /* text-align: center; */
+    padding: 20px;
+    background-color: white;
+}
+
+button{
+    background-color:hsl(47, 88%, 63%); 
+    color: hsl(0, 0%, 7%);
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 900;
+}
+
+p{
+    font-size: 16px;
+    font-weight: bold;
+}
+.profile{
+    display: flex;
+    
+}
+
+.content{
+    color: hsl(0, 0%, 50%);
+    line-height: 25px;
+    font-size: 16px;
+}
+
+h4{
+    margin-left: 10px;
+    font-weight: 900;
+}
+
+>>>>>>> 29401021689af644c87661aca710062e307ce934

@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+.container {
+  /* max-width: 1440px; */
+  width: 500px;
+  margin: 100px auto;
+  display: flex;
+ 
+}
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+  border-radius: 15px;
+  color: #fff;
+  padding: 15px;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+.score {
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}
+
+.result-section h3 {
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+}
+
+.actual-score {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.target-score {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(235, 228, 228,0.5);
+}
+
+.result-section p {
+  text-align: center;
+}
+.summary-section {
+  width: 50%;
+  box-shadow: 0 0 10px rgb(220, 213, 213);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.score-list {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.score-board {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.Reaction-styles {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.2);
+}
+
+.Memory-styles {
+  color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.2);
+}
+.Verbal-styles {
+  color: hsl(166, 100%, 37%);
+  background-color: hsla(166, 100%, 37%, 0.2);
+}
+.Visual-styles {
+  color:hsl(234, 85%, 45%);
+  background-color: hsla(234, 85%, 45%,0.2);
+}
+
+.score-text{
+  color:hsl(224, 30%, 27%);
+}
+
+button {
+  padding: 12px;
+  border-radius: 20px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  border: none;
+  font-weight: bold;
+}
+
+@media   (min-width:100px) and (max-width:400px)
+{
+  .container{
+    flex-direction:column ;
+  }
+}
+

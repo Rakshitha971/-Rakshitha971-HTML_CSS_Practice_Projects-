@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body {
+  font-size: 13px;
+  background-color: hsl(0, 0%, 81%);
+}
+
+h4 {
+  color: hsl(0, 0%, 81%);
+}
+h5 {
+  color: hsla(0, 0%, 81%, 50%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 1% auto;
+  max-width: 1000px;
+  gap: 20px;
+}
+.quotation {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  z-index: -1;
+}
+.card {
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+}
+.profile-header img {
+  border-radius: 50%;
+  border: 2px solid hsla(0, 0%, 81%, 50%);
+  width: 30px;
+  height: 30px;
+}
+
+.profile-header {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.card-p1 {
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 10px;
+}
+.card-p2 {
+  font-weight: 500;
+  color: hsla(0, 0%, 100%, 70%);
+}
+.daniel-card {
+  background-color: hsl(263, 55%, 52%);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.Jonathan-card {
+  background-color: hsl(217, 19%, 35%);
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.Jeanette-card {
+  background-color: hsl(0, 23%, 95%);
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.Jeanette-card h4,
+.Jeanette-card .card-p1 {
+  color: hsl(219, 29%, 14%);
+  font-weight: 600;
+}
+.Jeanette-card h5 {
+  color: hsla(219, 29%, 14%, 50%);
+}
+
+.Jeanette-card .card-p2 {
+  color: hsla(219, 29%, 14%, 70%);
+}
+
+.Patrick-card {
+  background-color: hsl(219, 29%, 14%);
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.Kira-card {
+  background-color: hsl(0, 0%, 100%);
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.Kira-card h4,
+.Kira-card .card-p1 {
+  color: hsl(219, 29%, 14%);
+  font-weight: 600;
+}
+
+.Kira-card h5 {
+  color: hsla(219, 29%, 14%, 50%);
+}
+
+.Kira-card .card-p2 {
+  color: hsla(219, 29%, 14%, 70%);
+}
+
+
+@media (max-width:376px){
+  .container{
+    display: block;
+    margin: 20px
+  }
+
+  .card{
+    margin: 20px;
+  }
+}

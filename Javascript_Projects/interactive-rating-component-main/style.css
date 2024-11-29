@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Orange: hsl(25, 97%, 53%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+  background-color: var(--Very-Dark-Blue);
+  /* Weights: 400, 700 */
+}
+
+.rating-container {
+  background-color: var(--Dark-Blue);
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.star-img {
+  width: 40px;
+  height: 40px;
+  clip-path: circle(50%);
+  text-align: center;
+  background-color: #41454a;
+}
+
+img {
+  margin-top: 11px;
+}
+
+h1,
+h2 {
+  margin-top: 20px;
+  color: var(--White);
+  font-weight: 700;
+}
+
+p {
+  color: var(--Light-Grey);
+  font-weight: 700;
+  margin-block: 20px;
+  line-height: 1.58;
+}
+
+.rate-container {
+  display: flex;
+  margin-block: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 20px;
+}
+
+.radio input[type='radio'] {
+  display: none;
+}
+
+.radio label {
+  display: block;
+  font-size: 16px;
+  color: var(--White);
+  width: 50px;
+  height: 50px;
+  clip-path: circle(50%);
+  background-color: #41454a;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.radio input[type='radio']:checked ~ label {
+  background-color: var(--White);
+  color: black;
+  cursor: pointer;
+}
+
+.radio input[type='radio']:hover ~ label {
+  background-color: var(--Orange);
+  color: black;
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.9375rem 0;
+  background-color: var(--Orange);
+  border-radius: 6.25rem;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  margin-block: 20px;
+  cursor: pointer;
+}
+
+.submit-btn:active {
+  background-color: var(--White);
+  color: black;
+  cursor: pointer;
+}
+
+.inActive {
+  display: none;
+}
+
+.Active {
+  display: block;
+}
+
+.row {
+  background-color: var(--Dark-Blue);
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.Thank-you-desc {
+  text-align: center;
+}
+
+#thanks-box {
+  display: none;
+}
+
+@media (max-width: 426px) {
+  .rating-container {
+    max-width: 250px;
+  }
+
+  .radio label {
+    font-size: 12px;
+    width: 35px;
+    height: 35px;
+  }
+}
