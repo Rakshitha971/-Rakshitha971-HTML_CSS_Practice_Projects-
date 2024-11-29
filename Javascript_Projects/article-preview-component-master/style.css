@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  background-color: #ecf2f8;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-preview-container {
+  max-width: 700px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 50px auto;
+  display: flex;
+  gap: 20px;
+  border-radius: 10px 0px 10px 0px;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.drawers-img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.description {
+  padding: 28px;
+}
+
+.preview-text {
+  margin-block: 10px;
+  font-size: 12px;
+  color: #9eafc2;
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  font-size: 20px;
+}
+
+/* profile styles*/
+
+.author-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+.profile-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+}
+
+.profile-img img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile-info .Name,
+.profile-info .Date {
+  font-size: 12px;
+}
+
+.profile-info .Name {
+  font-weight: 700;
+  color: #48556a;
+}
+
+.profile-info .Date {
+  font-weight: 500;
+  color: #9eafc2;
+}
+
+.share-btn {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  margin-top: 0;
+  background-color: #ecf2f8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links-container {
+  position: absolute;
+  background-color: #48556a;
+  border-radius: 10px;
+  width: 170px;
+  padding: 8px;
+  top: -50px;
+  left: 240px;
+  display: none;
+}
+.share-text {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #9eafc2;
+}
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.down-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 12px solid #48556a;
+  position: absolute;
+  top: 27px;
+}
+
+.social-icons {
+  width: 15px;
+}
+
+.hidden {
+  display: block;
+}
+.mobile-author-area {
+  display: none;
+}
+
+.mobile-avatar-container {
+  display: none;
+}
+
+.mobile-author-share-btn {
+  display: none;
+}
+.mobile-social-sharing-bar {
+  display: none;
+}
+@media (width < 768px) {
+  .article-preview-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    gap: 0;
+  }
+
+  .product-image {
+    height: 150px;
+  }
+  .drawers-img {
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+
+  .description {
+    padding: 20px 30px;
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+
+  .description p {
+    font-size: 13px;
+  }
+
+  .profile {
+    margin-top: 20px;
+  }
+
+  .author-info {
+    display: none;
+  }
+
+  /*Mobile author area*/
+  .mobile-author-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 20px 30px;
+    /* background-color: #cee2f5; */
+  }
+
+  .mobile-avatar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .mobile-social-sharing-bar {
+    width: 100%;
+    background-color: #48556a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 0px 0px 10px 10px;
+    display: none;
+  }
+
+  .mobile-share-icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .mobile-author-share-btn,
+  .mobile-social-sharing-bar-btn {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-top: 0;
+    background-color: #ecf2f8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

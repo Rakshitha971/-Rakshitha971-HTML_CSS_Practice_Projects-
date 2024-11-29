@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Product list with cart</title>
+    <link rel="stylesheet" href="build.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="./output.css" rel="stylesheet" />
+
+    <script src="script.js" defer></script>
+</head>
+
+<body class="bg-rose-50">
+    <div class="overlay hidden fixed inset-0 bg-black bg-opacity-50 z-10"></div>
+    <div class="container p-2">
+        <div class="productlist-container p-8 lg:flex">
+            <div class="productlist-container-1">
+                <div class="header text-left self-start">
+                    <h1 class="text-4xl my-3 font-bold text-rose-950">Desserts</h1>
+                </div>
+                <div class="product-cards flex flex-wrap gap-3">
+                    <div class="card max-w-[285px]  lg:max-w-[280px]">
+                        <div class="product-img overflow-hidden rounded-lg">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="/assets/images/image-waffle-desktop.jpg" />
+                                <source media="(min-width: 768px)" srcset="/assets/images/image-waffle-tablet.jpg" />
+                                <source media="(min-width:320px)" srcset="/assets/images/image-waffle-mobile.jpg" />
+                                <img src="" alt="waffle-thumbnail" />
+                            </picture>
+
+                            <!-- <img src="/assets/images/image-waffle-desktop.jpg" alt="Waffle-img" class="w-full"> -->
+                        </div>
+                        <div class="product-details p-2 my-4 relative" data-pid="001">
+                            <p class="product-name text-xs text-[#7c4e4b] font-normal">
+                                Waffle
+                            </p>
+                            <h2 class="product-with-toppings text-rose-950 font-medium">
+                                Waffle with Berries
+                            </h2>
+                            <p class="product-price text-[#c0482d] font-medium">$<span>6.50</span></p>
+                            <button
+                                class="add-to-cart-button flex bg-white w-[170px] justify-evenly items-center gap-1.5 py-2 px-[28px] rounded-full border border-[#7c4e4b] absolute -top-9 right-[13%] lg:right-[20%]">
+                                <img src="/assets/images/icon-add-to-cart.svg" alt="add-to-cart" />
+                                <p class="text-rose-950 font-medium">Add to Cart</p>
+                            </button>
+                            <div
+                                class="minus-plus-btn hidden bg-[#cd4f4f] w-[170px] justify-between items-center py-2 px-[15px] rounded-full absolute -top-9 right-[13%] lg:right-[20%] ">
+                                <button
+                                    class="decrement-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-decrement-quantity.svg"
+                                        alt="icon-decrement-quantity"></button>
+                                <div class="quantity text-white"><span></span></div>
+                                <button
+                                    class="increment-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-increment-quantity.svg" alt="icon-increment-quantity"
+                                        class="text-white"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card max-w-[285px]  lg:max-w-[280px]">
+                        <div class="product-img overflow-hidden rounded-lg">
+                            <picture>
+                                <source media="(min-width: 1024px)"
+                                    srcset="/assets/images/image-creme-brulee-desktop.jpg" />
+                                <source media="(min-width: 768px)"
+                                    srcset="/assets/images/image-creme-brulee-tablet.jpg" />
+                                <source media="(min-width:320px)"
+                                    srcset="/assets/images/image-creme-brulee-mobile.jpg" />
+                                <img src="assets/images/image-creme-brulee-thumbnail.jpg" alt="waffle-thumbnail" />
+                            </picture>
+                            <!-- <img src="/assets/images/image-waffle-desktop.jpg" alt="Waffle-img" class="w-full"> -->
+                        </div>
+                        <div class="product-details p-2 my-4 relative" data-pid="002">
+                            <p class="product-name text-xs text-[#7c4e4b] font-normal">
+                                Vanilla Bean Crème Brûlée
+                            </p>
+                            <h2 class="product-with-toppings text-rose-950 font-medium">
+                                Crème Brûlée
+                            </h2>
+                            <p class="product-price text-[#c0482d] font-medium">$<span>7.00</span></p>
+                            <button
+                                class="add-to-cart-button flex bg-white w-[170px] justify-evenly items-center gap-1.5 py-2 px-[28px] rounded-full border border-[#7c4e4b] absolute -top-9 right-[13%] lg:right-[20%]">
+                                <img src="/assets/images/icon-add-to-cart.svg" alt="add-to-cart" />
+                                <p class="text-rose-950 font-medium">Add to Cart</p>
+                            </button>
+                            <div
+                                class="minus-plus-btn hidden bg-[#cd4f4f] w-[170px] justify-between items-center py-2 px-[15px] rounded-full absolute -top-9 right-[13%] lg:right-[20%] ">
+                                <button
+                                    class="decrement-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-decrement-quantity.svg"
+                                        alt="icon-decrement-quantity"></button>
+                                <div class="quantity text-white"><span></span></div>
+                                <button
+                                    class="increment-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-increment-quantity.svg" alt="icon-increment-quantity"
+                                        class="text-white"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card max-w-[285px]  lg:max-w-[280px]">
+                        <div class="product-img overflow-hidden rounded-lg">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="/assets/images/image-macaron-desktop.jpg" />
+                                <source media="(min-width: 768px)" srcset="/assets/images/image-macaron-tablet.jpg" />
+                                <source media="(min-width:320px)" srcset="/assets/images/image-macaron-mobile.jpg" />
+                                <img src="assets/images/image-macaron-thumbnail.jpg" alt="macaron" />
+                            </picture>
+                            <!-- <img src="/assets/images/image-waffle-desktop.jpg" alt="Waffle-img" class="w-full"> -->
+                        </div>
+                        <div class="product-details p-2 my-4 relative" data-pid="003">
+                            <p class="product-name text-xs text-[#7c4e4b] font-normal">
+                                Macaron Mix of Five
+                            </p>
+                            <h2 class="product-with-toppings text-rose-950 font-medium">
+                                Macaron
+                            </h2>
+                            <p class="product-price text-[#c0482d] font-medium">$<span>8.00</span></p>
+                            <button
+                                class="add-to-cart-button flex bg-white w-[170px] justify-evenly items-center gap-1.5 py-2 px-[28px] rounded-full border border-[#7c4e4b] absolute -top-9 right-[13%] lg:right-[20%]">
+                                <img src="/assets/images/icon-add-to-cart.svg" alt="add-to-cart" />
+                                <p class="text-rose-950 font-medium">Add to Cart</p>
+                            </button>
+                            <div
+                                class="minus-plus-btn hidden bg-[#cd4f4f] w-[170px] justify-between items-center py-2 px-[15px] rounded-full absolute -top-9 right-[13%] lg:right-[20%] ">
+                                <button
+                                    class="decrement-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-decrement-quantity.svg"
+                                        alt="icon-decrement-quantity"></button>
+                                <div class="quantity text-white"><span></span></div>
+                                <button
+                                    class="increment-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-increment-quantity.svg" alt="icon-increment-quantity"
+                                        class="text-white"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card max-w-[285px]  lg:max-w-[280px]">
+                        <div class="product-img overflow-hidden rounded-lg">
+                            <picture>
+                                <source media="(min-width: 1024px)"
+                                    srcset="/assets/images/image-tiramisu-desktop.jpg" />
+                                <source media="(min-width: 768px)" srcset="/assets/images/image-tiramisu-tablet.jpg" />
+                                <source media="(min-width:320px)" srcset="/assets/images/image-tiramisu-mobile.jpg" />
+                                <img src="assets/images/image-tiramisu-thumbnail.jpg" alt="tiramisu" />
+                            </picture>
+
+                        </div>
+                        <div class="product-details p-2 my-4 relative" data-pid="004">
+                            <p class="product-name text-xs text-[#7c4e4b] font-normal">
+                                Classic Tiramisu
+                            </p>
+                            <h2 class="product-with-toppings text-rose-950 font-medium">
+                                Tiramisu
+                            </h2>
+                            <p class="product-price text-[#c0482d] font-medium">$<span>5.50</span></p>
+                            <button
+                                class="add-to-cart-button flex bg-white w-[170px] justify-evenly items-center gap-1.5 py-2 px-[28px] rounded-full border border-[#7c4e4b] absolute -top-9 right-[13%] lg:right-[20%]">
+                                <img src="/assets/images/icon-add-to-cart.svg" alt="add-to-cart" />
+                                <p class="text-rose-950 font-medium">Add to Cart</p>
+                            </button>
+                            <div
+                                class="minus-plus-btn hidden bg-[#cd4f4f] w-[170px] justify-between items-center py-2 px-[15px] rounded-full absolute -top-9 right-[13%] lg:right-[20%] ">
+                                <button
+                                    class="decrement-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-decrement-quantity.svg"
+                                        alt="icon-decrement-quantity"></button>
+                                <div class="quantity text-white"><span></span></div>
+                                <button
+                                    class="increment-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-increment-quantity.svg" alt="icon-increment-quantity"
+                                        class="text-white"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card max-w-[285px]  lg:max-w-[280px]">
+                        <div class="product-img overflow-hidden rounded-lg">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="/assets/images/image-baklava-desktop.jpg" />
+                                <source media="(min-width: 768px)" srcset="/assets/images/image-baklava-tablet.jpg" />
+                                <source media="(min-width:320px)" srcset="/assets/images/image-baklava-mobile.jpg" />
+                                <img src="/assets/images/image-baklava-thumbnail.jpg" alt="tiramisu" />
+                            </picture>
+
+                        </div>
+                        <div class="product-details p-2 my-4 relative" data-pid="005">
+                            <p class="product-name text-xs text-[#7c4e4b] font-normal">
+                                Pistachio Baklava
+                            </p>
+                            <h2 class="product-with-toppings text-rose-950 font-medium">
+                                Baklava
+                            </h2>
+                            <p class="product-price text-[#c0482d] font-medium">$<span>4.00</span></p>
+                            <button
+                                class="add-to-cart-button flex bg-white w-[170px] justify-evenly items-center gap-1.5 py-2 px-[28px] rounded-full border border-[#7c4e4b] absolute -top-9 right-[13%] lg:right-[20%]">
+                                <img src="/assets/images/icon-add-to-cart.svg" alt="add-to-cart" />
+                                <p class="text-rose-950 font-medium">Add to Cart</p>
+                            </button>
+                            <div
+                                class="minus-plus-btn hidden bg-[#cd4f4f] w-[170px] justify-between items-center py-2 px-[15px] rounded-full absolute -top-9 right-[13%] lg:right-[20%] ">
+                                <button
+                                    class="decrement-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-decrement-quantity.svg"
+                                        alt="icon-decrement-quantity"></button>
+                                <div class="quantity text-white"><span></span></div>
+                                <button
+                                    class="increment-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-increment-quantity.svg" alt="icon-increment-quantity"
+                                        class="text-white"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card max-w-[285px]  lg:max-w-[280px]">
+                        <div class="product-img overflow-hidden rounded-lg">
+                            <picture>
+                                <source media="(min-width: 1024px)"
+                                    srcset="/assets/images/image-meringue-desktop.jpg" />
+                                <source media="(min-width: 768px)" srcset="/assets/images/image-meringue-tablet.jpg" />
+                                <source media="(min-width:320px)" srcset="/assets/images/image-meringue-mobile.jpg" />
+                                <img src="/assets/images/image-meringue-thumbnail.jpg" alt="tiramisu" />
+                            </picture>
+
+                        </div>
+                        <div class="product-details p-2 my-4 relative" data-pid="006">
+                            <p class="product-name text-xs text-[#7c4e4b] font-normal">
+                                Lemon Meringue Pie
+                            </p>
+                            <h2 class="product-with-toppings text-rose-950 font-medium">
+                                Pie
+                            </h2>
+                            <p class="product-price text-[#c0482d] font-medium">$<span>5.00</span></p>
+                            <button
+                                class="add-to-cart-button flex bg-white w-[170px] justify-evenly items-center gap-1.5 py-2 px-[28px] rounded-full border border-[#7c4e4b] absolute -top-9 right-[13%] lg:right-[20%]">
+                                <img src="/assets/images/icon-add-to-cart.svg" alt="add-to-cart" />
+                                <p class="text-rose-950 font-medium">Add to Cart</p>
+                            </button>
+                            <div
+                                class="minus-plus-btn hidden bg-[#cd4f4f] w-[170px] justify-between items-center py-2 px-[15px] rounded-full absolute -top-9 right-[13%] lg:right-[20%] ">
+                                <button
+                                    class="decrement-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-decrement-quantity.svg"
+                                        alt="icon-decrement-quantity"></button>
+                                <div class="quantity text-white"><span></span></div>
+                                <button
+                                    class="increment-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-increment-quantity.svg" alt="icon-increment-quantity"
+                                        class="text-white"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card max-w-[285px]  lg:max-w-[280px]">
+                        <div class="product-img overflow-hidden rounded-lg">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="/assets/images/image-cake-desktop.jpg" />
+                                <source media="(min-width: 768px)" srcset="/assets/images/image-cake-tablet.jpg" />
+                                <source media="(min-width:320px)" srcset="/assets/images/image-cake-mobile.jpg" />
+                                <img src="/assets/images/image-cake-thumbnail.jpg" alt="tiramisu" />
+                            </picture>
+
+                        </div>
+                        <div class="product-details p-2 my-4 relative" data-pid="007">
+                            <p class="product-name text-xs text-[#7c4e4b] font-normal">
+                                Red Velvet Cake
+                            </p>
+                            <h2 class="product-with-toppings text-rose-950 font-medium">
+                                Cake
+                            </h2>
+                            <p class="product-price text-[#c0482d] font-medium">$<span>4.50</span></p>
+                            <button
+                                class="add-to-cart-button flex bg-white w-[170px] justify-evenly items-center gap-1.5 py-2 px-[28px] rounded-full border border-[#7c4e4b] absolute -top-9 right-[13%] lg:right-[20%]">
+                                <img src="/assets/images/icon-add-to-cart.svg" alt="add-to-cart" />
+                                <p class="text-rose-950 font-medium">Add to Cart</p>
+                            </button>
+                            <div
+                                class="minus-plus-btn hidden bg-[#cd4f4f] w-[170px] justify-between items-center py-2 px-[15px] rounded-full absolute -top-9 right-[13%] lg:right-[20%] ">
+                                <button
+                                    class="decrement-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-decrement-quantity.svg"
+                                        alt="icon-decrement-quantity"></button>
+                                <div class="quantity text-white"><span></span></div>
+                                <button
+                                    class="increment-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-increment-quantity.svg" alt="icon-increment-quantity"
+                                        class="text-white"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card max-w-[285px]  lg:max-w-[280px]">
+                        <div class="product-img overflow-hidden rounded-lg">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="/assets/images/image-brownie-desktop.jpg" />
+                                <source media="(min-width: 768px)" srcset="/assets/images/image-brownie-tablet.jpg" />
+                                <source media="(min-width:320px)" srcset="/assets/images/image-brownie-mobile.jpg" />
+                                <img src="/assets/images/image-brownie-thumbnail.jpg" alt="tiramisu" />
+                            </picture>
+
+                        </div>
+                        <div class="product-details p-2 my-4 relative" data-pid="008">
+                            <p class="product-name text-xs text-[#7c4e4b] font-normal">
+                                Salted Caramel Brownie
+                            </p>
+                            <h2 class="product-with-toppings text-rose-950 font-medium">
+                                Brownie
+                            </h2>
+                            <p class="product-price text-[#c0482d] font-medium">$<span>4.50</span></p>
+                            <button
+                                class="add-to-cart-button flex bg-white w-[170px] justify-evenly items-center gap-1.5 py-2 px-[28px] rounded-full border border-[#7c4e4b] absolute -top-9 right-[13%] lg:right-[20%]">
+                                <img src="/assets/images/icon-add-to-cart.svg" alt="add-to-cart" />
+                                <p class="text-rose-950 font-medium">Add to Cart</p>
+                            </button>
+                            <div
+                                class="minus-plus-btn hidden bg-[#cd4f4f] w-[170px] justify-between items-center py-2 px-[15px] rounded-full absolute -top-9 right-[13%] lg:right-[20%] ">
+                                <button
+                                    class="decrement-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-decrement-quantity.svg"
+                                        alt="icon-decrement-quantity"></button>
+                                <div class="quantity text-white"><span></span></div>
+                                <button
+                                    class="increment-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-increment-quantity.svg" alt="icon-increment-quantity"
+                                        class="text-white"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card max-w-[285px]  lg:max-w-[280px]">
+                        <div class="product-img overflow-hidden rounded-lg">
+                            <picture>
+                                <source media="(min-width: 1024px)"
+                                    srcset="/assets/images/image-panna-cotta-desktop.jpg" />
+                                <source media="(min-width: 768px)"
+                                    srcset="/assets/images/image-panna-cotta-tablet.jpg" />
+                                <source media="(min-width:320px)"
+                                    srcset="/assets/images/image-panna-cotta-mobile.jpg" />
+                                <img src="/assets/images/image-panna-cotta-thumbnail.jpg" alt="tiramisu" />
+                            </picture>
+
+                        </div>
+                        <div class="product-details p-2 my-4 relative" data-pid="009">
+                            <p class="product-name text-xs text-[#7c4e4b] font-normal">
+                                Vanilla Panna Cotta
+                            </p>
+                            <h2 class="product-with-toppings text-rose-950 font-medium">
+                                Panna Cotta
+                            </h2>
+                            <p class="product-price text-[#c0482d] font-medium">$<span>6.50</span></p>
+                            <button
+                                class="add-to-cart-button flex bg-white w-[170px] justify-evenly items-center gap-1.5 py-2 px-[28px] rounded-full border border-[#7c4e4b] absolute -top-9 right-[13%] lg:right-[20%]">
+                                <img src="/assets/images/icon-add-to-cart.svg" alt="add-to-cart" />
+                                <p class="text-rose-950 font-medium">Add to Cart</p>
+                            </button>
+                            <div
+                                class="minus-plus-btn hidden bg-[#cd4f4f] w-[170px] justify-between items-center py-2 px-[15px] rounded-full absolute -top-9 right-[13%] lg:right-[20%] ">
+                                <button
+                                    class="decrement-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-decrement-quantity.svg"
+                                        alt="icon-decrement-quantity"></button>
+                                <div class="quantity text-white"><span></span></div>
+                                <button
+                                    class="increment-btn rounded-full border-[1.5px] border-white bg-transparent w-5 h-5 flex justify-center items-center"><img
+                                        src="/assets/images/icon-increment-quantity.svg" alt="icon-increment-quantity"
+                                        class="text-white"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cartitem-container max-w-[285px] md:min-w-[300px]">
+                <div class="cart bg-white font-medium rounded pb-4">
+                    <h3 class="m-4 text-xl font-bold text-[#c73a0f]">Your Cart(<span>0</span>)</h3>
+                    <div class="cart-list"></div>
+                    <div class="total-calc p-2 flex justify-between items-center">
+                        <p class="text-xs text-[#82706C]">Order Total</p>
+                        <span class='total font-bold !text-[#161110]'>$<span>100.00</span></span>
+                    </div>
+                    <div class="delivery flex justify-center items-center gap-1 bg-[#fcf8f5] p-2 m-4 rounded ">
+                        <img src="/assets/images/icon-carbon-neutral.svg" alt="">
+                        <p class="text-xs text-[#706b67]">This is a <b class="font-bold text-black">carbon-neutral</b>
+                            delivery</p>
+                    </div>
+                    <div class="confirm-btn bg-[#942D0B] p-2 m-4 rounded-full text-center text-white hidden">
+                        <button>Confirm Order</button>
+                    </div>
+                    <div class="cart-items p-4 flex justify-center flex-col items-center">
+                        <img src="/assets/images/illustration-empty-cart.svg" alt="empty-cart" />
+                        <p class="text-[10px] my-4">Your added items will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+</body>
+
+
+</html>
+
+
